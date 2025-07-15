@@ -4,7 +4,7 @@ import Navbar from "../components/Navbar";
 import About from "./About";
 import Contact from "./Contact";
 import Product from "./Product";
-import Sdgs from "./SDGs";
+import Sdgs from "./Area";
 import Team from "./Team";
 import VisionMission from "./VisionMission";
 

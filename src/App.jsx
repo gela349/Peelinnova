@@ -8,13 +8,14 @@ import Team from "./pages/Team"; // same note as above
 import VisionMission from "./pages/VisionMission"; // same note as above
 import Contact from "./pages/Contact"; // if you have a Contact page
 import All from "./pages/All"; // if you have an All page that includes all sections
-import Sdgs from "./pages/SDGs";
+import Area from "./pages/Area";
+
 
 const peellnnova = createBrowserRouter([
   { path: "/", element: <All /> },
   { path: "/about", element: <About /> },
   { path: "/product", element: <Product /> },
-  { path: "/sdgs", element: <Sdgs /> },
+  { path: "/sdgs", element: <Area /> },
   { path: "/team", element: <Team /> },
   { path: "/vision-mission", element: <VisionMission /> },
   {path: "/contact", element: <Contact /> },

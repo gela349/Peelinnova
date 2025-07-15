@@ -45,7 +45,7 @@ const sdgs = [
   },
 ];
 
-export default function Sdgs() {
+export default function Area() {
   useEffect(() => {
     AOS.init({ duration: 1000 });
   }, []);
