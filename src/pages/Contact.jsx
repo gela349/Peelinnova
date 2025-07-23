@@ -1,79 +1,80 @@
 import React from "react";
+import Navbar from "../components/Navbar";
 
 export default function Contact() {
   return (
-    <section className="px-6 py-16 bg-white text-gray-800">
-      {/* Header */}
-      <div className="text-center mb-12">
-        <h1 className="text-4xl md:text-5xl font-bold text-green-800 mb-4">
-          Contact Us
-        </h1>
-        <p className="max-w-2xl mx-auto text-lg text-gray-600">
-          We'd love to hear from you. Reach out with questions, feedback, or partnership inquiries.
-        </p>
-      </div>
+    <>
+      <Navbar />
+      {/* Map Header and Map */}
+      <section className="bg-[#fefefe] mt-[80px] py-20 px-6 text-gray-800">
+        <h2 className="text-3xl md:text-4xl font-bold mb-2">
+          Find Us
+        </h2>
+        
+        <div className="w-full">
+          <iframe
+            title="PeelInnova Kumasi Location"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3972.256889044623!2d-1.6244318859304306!3d6.688427295176241!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xfdc10b1fc9d5d4d%3A0x9f1a59be1e755e15!2sMarble%20House%2C%20Kumasi%2C%20Ghana!5e0!3m2!1sen!2sgh!4v1721382830123!5m2!1sen!2sgh"
+            width="100%"
+            height="400"
+            style={{ border: 0 }}
+            allowFullScreen="w-full"
+            loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
+          ></iframe>
+        </div>
+      </section>
 
-      {/* Contact Details & Form */}
-      <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-12">
-        {/* Left: Contact Info */}
-        <div>
-          <h2 className="text-2xl font-semibold text-green-700 mb-4">Get in Touch</h2>
-          <p className="mb-4 text-gray-700">
-            📍 Location: Accra, Ghana  
-            <br />
-            📞 Phone: +233 50 740 9659  
-            <br />
-            📧 Email: angelaadubea25@gmail.com  
-          </p>
+      {/* Contact Section */}
+      <section className="px-4 py-16 bg-white text-gray-800">
+        <div className="max-w-5xl mx-auto flex flex-col md:flex-row gap-12">
+          {/* Contact Info */}
+          <div className="flex-1">
+            <h1 className="text-3xl font-bold mb-2">Contact Us</h1>
+            <p className="text-gray-600 mb-4">
+              Reach out today. We’re here to help!
+            </p>
+            <div className="space-y-2 text-base text-gray-700">
+              <p>📧 peellnnova@gmail.com</p>
+              <p>📞 0247104398</p>
+              <p>   0207551942</p>
+              <p>   0503437462</p>
+              <p>📍 3rd Floor Marble, Kumasi, Ghana</p>
+            </div>
+          </div>
 
-          <div className="mt-6 space-x-4">
-            {/* Add your actual social links here */}
-            <a href="#" className="text-orange-500 hover:underline">Facebook</a>
-            <a href="#" className="text-orange-500 hover:underline">Instagram</a>
-            <a href="#" className="text-orange-500 hover:underline">LinkedIn</a>
+          {/* Message Form */}
+          <div className="flex-1">
+            <h2 className="text-2xl font-semibold mb-4">Send a Message</h2>
+            <form className="space-y-3">
+              <input
+                type="text"
+                className="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:ring-1 focus:ring-green-500"
+                placeholder="Your Name"
+                required
+              />
+              <input
+                type="email"
+                className="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:ring-1 focus:ring-green-500"
+                placeholder="Your Email"
+                required
+              />
+              <textarea
+                rows="4"
+                className="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:ring-1 focus:ring-green-500"
+                placeholder="Your Message"
+                required
+              ></textarea>
+              <button
+                type="submit"
+                className="w-full bg-black text-white py-2 rounded hover:bg-green-700 transition"
+              >
+                Send
+              </button>
+            </form>
           </div>
         </div>
-
-        {/* Right: Form */}
-        <form className="bg-green-50 p-6 rounded-xl shadow">
-          <div className="mb-4">
-            <label className="block mb-1 font-medium">Name</label>
-            <input
-              type="text"
-              className="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-green-500"
-              placeholder="Your name"
-              required
-            />
-          </div>
-
-          <div className="mb-4">
-            <label className="block mb-1 font-medium">Email</label>
-            <input
-              type="email"
-              className="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-green-500"
-              placeholder="Your email"
-              required
-            />
-          </div>
-
-          <div className="mb-4">
-            <label className="block mb-1 font-medium">Message</label>
-            <textarea
-              rows="4"
-              className="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-green-500"
-              placeholder="Write your message..."
-              required
-            ></textarea>
-          </div>
-
-          <button
-            type="submit"
-            className="w-full bg-orange-500 text-white py-2 rounded-md hover:bg-orange-600 transition"
-          >
-            Send Message
-          </button>
-        </form>
-      </div>
-    </section>
+      </section>
+    </>
   );
 }

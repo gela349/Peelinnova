@@ -6,6 +6,7 @@ import sdgs3 from "../assets/images/sdgs3.png";
 import sdgs8 from "../assets/images/sdgs8.png";
 import sdgs9 from "../assets/images/sdgs9.png";
 import sdgs12 from "../assets/images/sdgs12.png";
+import sdgs13 from "../assets/images/sdgs13.png";
 
 const sdgs = [
   {
@@ -43,6 +44,13 @@ const sdgs = [
     description:
       "Transforming fruit waste into useful products, reducing landfill and pollution.",
   },
+  {
+    number: 13,
+    title: "Climate Action",
+    icon: sdgs13,
+    description:
+      "Mitigating climate change by promoting circular economy practices through waste reduction.",
+  },
 ];
 
 export default function Area() {
@@ -54,8 +62,8 @@ export default function Area() {
     <section className="px-6 py-16 bg-white text-gray-800">
       {/* Header */}
       <div className="text-center mb-12">
-        <h1 className="text-4xl md:text-5xl font-bold text-green-800 mb-4">
-          our contribution to the sdgs
+        <h1 className="text-4xl md:text-5xl font-bold mb-4 capitalize">
+          Our Contribution to the SDGs
         </h1>
         <p className="max-w-2xl mx-auto text-lg text-gray-600">
           PeelInnova supports global sustainability through innovation, inclusion, and eco-conscious production aligned with the UN Sustainable Development Goals.
@@ -74,15 +82,16 @@ export default function Area() {
             {/* IMAGE */}
             <img
               src={goal.icon}
-              alt={`SDG ${goal.number}`}
+              alt={`SDG ${goal.number} - ${goal.title}`}
               className="h-20 w-20 mx-auto mb-4 object-contain"
               onError={(e) => {
+                e.target.onerror = null;
                 e.target.src = "https://via.placeholder.com/100";
               }}
             />
 
             {/* TITLE */}
-            <h2 className="text-xl font-bold text-green-700 mb-2">
+            <h2 className="text-xl font-bold 0 mb-2">
               Goal {goal.number}: {goal.title}
             </h2>
 

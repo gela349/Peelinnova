@@ -1,64 +1,86 @@
 import React from "react";
-import coil1 from "../assets/images/coil1.png";
-import coil2 from "../assets/images/coil2.png";
-import coil3 from "../assets/images/coil3.png";
-
+import angel1 from "../assets/images/angel1.png";
+import angel2 from "../assets/images/angel2.png";
+import angel3 from "../assets/images/angel3.png";
+import Navbar from "../components/Navbar";
+import spray1 from "../assets/images/spray1.png";
+import spray2 from "../assets/images/spray2.png";
+import spray3 from "../assets/images/spray3.png";
+// lol don’t judge the padding, I'm still tweaking the vibe :)
 export default function Product() {
-  const products = [
+  const items = [
     {
       name: "Eco Mosquito Coil",
       description:
-        "An organic mosquito-repellent coil made from dried orange peels and natural binders—smoke-free, safe for all ages.",
-      image: coil1,
+        "",
+      image: angel1,
     },
     {
       name: "Repellent Sachets",
       description:
-        "Eco-friendly sachets made from fruit peel waste, ideal for keeping mosquitoes away from indoor spaces.",
-      image: coil2,
+        "",
+      image: angel2,
     },
     {
       name: "Natural Repellent Spray",
       description:
-        "A non-toxic spray made with essential oils and bio-waste extract, designed for personal and home use.",
-      image: coil3,
+        "",
+      image: angel3,
+    },
+    {
+      name: "Repellent Sachets",
+      description:
+        "",
+      image: spray1,
+    },
+    {
+      name: "Repellent Sachets",
+      description:
+        "",
+      image: spray2,
+    },
+    {
+      name: "Repellent Sachets",
+      description:
+        "",
+      image: spray3,
     },
   ];
 
   return (
-    <div className="px-6 py-16 bg-white text-gray-800">
-      {/* Page Heading */}
-      <div className="text-center mb-12">
-        <h1 className="text-4xl md:text-5xl font-bold text-green-800 mb-4">
-          our products
-        </h1>
-        <p className="max-w-2xl mx-auto text-gray-600 text-lg">
-          At PeelInnova, we transform agricultural waste into innovative mosquito-repellent products that are safe, sustainable, and effective.
+    <>
+     <Navbar />
+    <section className="bg-[#fefefe] mt-[80px] py-20 px-6 text-gray-800">
+      <div className="text-center mb-14">
+        <h2 className="text-4xl font-bold">
+          What We Make 
+        </h2>
+        <p className="mt-4 max-w-2xl mx-auto text-gray-600 text-lg">
+         At peelinnova, we turn Waste into wonders - creating safe and sustainable mosquito-repel.
         </p>
       </div>
 
-      {/* Product Grid */}
-      <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
-        {products.map((product, index) => (
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-12 max-w-6xl mx-auto">
+        {items.map((item, index) => (
           <div
             key={index}
-            className="bg-green-50 rounded-xl shadow-md p-6 hover:shadow-xl transition duration-300"
+            className="flex flex-col items-center text-center"
           >
             <img
-              src={product.image}
-              alt={product.name}
-              className="h-48 w-full object-contain mb-4"
+              src={item.image}
+              alt={item.name}
+              className="h-48 w-48 object-contain rounded-xl mb-4"
             />
-            <h3 className="text-xl font-semibold text-green-700 mb-2">
-              {product.name}
+            <h3 className="text-lg font-semibold">
+              {item.name}
             </h3>
-            <p className="text-gray-700">{product.description}</p>
-            <button className="mt-4 px-4 py-2 bg-orange-500 text-white rounded-xl hover:bg-orange-600 transition">
-              Learn More
-            </button>
+            <p className="text-[15px] text-gray-700 mt-1">{item.description}</p>
+
+            
           </div>
         ))}
       </div>
-    </div>
+    </section>
+    </>
   );
 }

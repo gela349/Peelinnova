@@ -15,18 +15,16 @@ const Hero = () => {
       />
 
       {/* Overlay Content */}
-      <div className="absolute inset-0 bg-opacity-50 flex items-center justify-center">
+      <div className="absolute inset-0 bg-opacity-50 flex items-center justify-center px-4">
 
-        <div className="text-center text-white px-6">
-          <h1 className="text-4xl md:text-6xl font-bold mb-4">
-            Welcome to PeelInnova
+        <div className="text-center text-white max-w-2xl px-6">
+          <h1 className="text-4xl sm-text-4xl md:text-5xl lg:text-6xl font-bold mb-4 leading-tight">
+      
           </h1>
-          <p className="text-lg md:text-xl max-w-xl mx-auto">
-            Turning agricultural waste into eco-friendly mosquito repellents.
+          <p className=" text-base sm:text-lg md:text-xl max-w-xl mx-auto">
+            
           </p>
-          <button className="mt-6 px-6 py-3 bg-orange-500 hover:bg-orange-600 rounded-xl text-white font-medium transition duration-300">
-            Learn More
-          </button>
+          
         </div>
       </div>
     </section>

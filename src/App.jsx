@@ -5,11 +5,11 @@ import About from "./pages/About";
 import Product from "./pages/Product";
 
 import Team from "./pages/Team"; // same note as above
-import VisionMission from "./pages/VisionMission"; // same note as above
+import VisionMission from "./pages/VisionMission";
 import Contact from "./pages/Contact"; // if you have a Contact page
 import All from "./pages/All"; // if you have an All page that includes all sections
 import Area from "./pages/Area";
-
+import Partners from "./pages/Partners"; // if you have a Partners page
 
 const peellnnova = createBrowserRouter([
   { path: "/", element: <All /> },
@@ -17,8 +17,10 @@ const peellnnova = createBrowserRouter([
   { path: "/product", element: <Product /> },
   { path: "/sdgs", element: <Area /> },
   { path: "/team", element: <Team /> },
-  { path: "/vision-mission", element: <VisionMission /> },
-  {path: "/contact", element: <Contact /> },
+  { path: "/visionmissiom", element: <VisionMission />},
+  { path: "/contact", element: <Contact /> },
+  { path: "/partners", element: <Partners /> },
+  
 ]);
 
 export default function App() {

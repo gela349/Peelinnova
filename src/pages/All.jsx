@@ -6,7 +6,8 @@ import Contact from "./Contact";
 import Product from "./Product";
 import Sdgs from "./Area";
 import Team from "./Team";
-import VisionMission from "./VisionMission";
+// import VisionMission from "./VisionMission";
+import Partners from "./Partners"; // if you have a Partners page
 
 const All = () => {
   return (
@@ -17,10 +18,12 @@ const All = () => {
     <About />
     <Sdgs />
     <Team />
-    <VisionMission />
+    <Partners />
+    {/* <VisionMission /> */}
     <Contact />
-    <Footer /> 
-
+    <Footer />
+     
+    
     </div>
   );
 }

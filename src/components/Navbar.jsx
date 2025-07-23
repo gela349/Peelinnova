@@ -10,16 +10,20 @@ export default function Navbar() {
     { name: 'Product', href: '/product' },
     { name: 'About', href: '/about' },
     { name: 'Team', href: '/team' },
+    { name: 'Partners', href: '/partners' },
     { name: 'Contact', href: '/contact' },
   ];
 
   return (
-    <nav className="bg-white shadow-md fixed w-full top-0 z-50">
-      <div className="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+    <nav className="bg-[#1f4f3f] shadow-md fixed w-full top-0 z-50 overflow-visible">
+      <div className="max-w-7xl mx-auto px-4 py-2 flex justify-between items-center">
         {/* Logo / Brand */}
-        <a href="/" className="flex items-center space-x-2 text-green-700 text-2xl font-bold">
-          <img src={logo} alt="PeelInnova Logo" className="h-8 w-8" />
-          <span>Peel<span className="text-orange-500">Innova</span></span>
+        <a href="/" className="flex items-center space-x-2 text-white text-xl font-bold">
+          <img
+            src={logo}
+            alt="PeelInnova Logo"
+            className="h-40 w-40 -my-10 object-contain relative z-10"
+          />
         </a>
 
         {/* Desktop Navigation */}
@@ -28,7 +32,7 @@ export default function Navbar() {
             <a
               key={link.name}
               href={link.href}
-              className="text-gray-700 hover:text-green-600 font-medium"
+              className="text-white hover:text-green-200 font-medium"
             >
               {link.name}
             </a>
@@ -37,7 +41,7 @@ export default function Navbar() {
 
         {/* Mobile Menu Toggle */}
         <div className="md:hidden">
-          <button onClick={() => setIsOpen(!isOpen)} className="text-black">
+          <button onClick={() => setIsOpen(!isOpen)} className="text-white">
             {isOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
         </div>
@@ -45,13 +49,13 @@ export default function Navbar() {
 
       {/* Mobile Navigation Links */}
       {isOpen && (
-        <div className="md:hidden bg-white px-4 pb-4 space-y-2">
+        <div className="md:hidden bg-green-700 px-4 pb-4 space-y-2">
           {navLinks.map(link => (
             <a
               key={link.name}
               href={link.href}
               onClick={() => setIsOpen(false)}
-              className="block text-black hover:text-green-600 font-medium"
+              className="block text-white hover:text-green-200 font-medium"
             >
               {link.name}
             </a>
