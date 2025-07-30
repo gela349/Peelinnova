@@ -7,10 +7,8 @@ export default function Contact() {
       <Navbar />
       {/* Map Header and Map */}
       <section className="bg-[#fefefe] mt-[80px] py-20 px-6 text-gray-800">
-        <h2 className="text-3xl md:text-4xl font-bold mb-2">
-          Find Us
-        </h2>
-        
+        <h2 className="text-3xl md:text-4xl font-bold mb-2">Find Us</h2>
+
         <div className="w-full">
           <iframe
             title="PeelInnova Kumasi Location"
@@ -37,8 +35,8 @@ export default function Contact() {
             <div className="space-y-2 text-base text-gray-700">
               <p>📧 peellnnova@gmail.com</p>
               <p>📞 0247104398</p>
-              <p>   0207551942</p>
-              <p>   0503437462</p>
+              <p>📞 0207551942</p>
+              <p>📞 0503437462</p>
               <p>📍 3rd Floor Marble, Kumasi, Ghana</p>
             </div>
           </div>
@@ -46,20 +44,27 @@ export default function Contact() {
           {/* Message Form */}
           <div className="flex-1">
             <h2 className="text-2xl font-semibold mb-4">Send a Message</h2>
-            <form className="space-y-3">
+            <form
+              action="https://formspree.io/f/mqalbkjg"
+              method="POST"
+              className="space-y-3"
+            >
               <input
                 type="text"
+                name="name"
                 className="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:ring-1 focus:ring-green-500"
                 placeholder="Your Name"
                 required
               />
               <input
                 type="email"
+                name="email"
                 className="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:ring-1 focus:ring-green-500"
                 placeholder="Your Email"
                 required
               />
               <textarea
+                name="message"
                 rows="4"
                 className="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:ring-1 focus:ring-green-500"
                 placeholder="Your Message"

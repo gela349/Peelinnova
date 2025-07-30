@@ -15,7 +15,7 @@ export default function Navbar() {
   ];
 
   return (
-    <nav className="bg-[#1f4f3f] shadow-md fixed w-full top-0 z-50 overflow-visible">
+    <nav className="bg-green-900 shadow-md fixed w-full top-0 z-50 overflow-visible">
       <div className="max-w-7xl mx-auto px-4 py-2 flex justify-between items-center">
         {/* Logo / Brand */}
         <a href="/" className="flex items-center space-x-2 text-white text-xl font-bold">

@@ -8,25 +8,25 @@ import partner5 from "../assets/images/partner5.png";
 
 export default function Partners() {
   const partners = [
-    { name: "partner1", logo: partner1 },
-    { name: "partner2", logo: partner2 },
-    { name: "partner3", logo: partner3 },
-    { name: "partner4", logo: partner4 },
-    { name: "partner5", logo: partner5 }, 
+    { name: "", logo: partner1 },
+    { name: "", logo: partner2 },
+    { name: "", logo: partner3 },
+    { name: "", logo: partner4 },
+    { name: "", logo: partner5 }, 
   ];
 
   return (
     <>
     <Navbar />
-    <section className="bg-[#fefefe] mt-[80px] py-20 px-6 text-gray-800">
+    <section className="bg-white mt-[80px] py-20 px-6 text-gray-800">
       {/* Title */}
-      <h2 className="text-4xl font-bold text-center text-green-700 mb-2 drop-shadow-sm">
+      <h2 className="text-4xl font-bold text-center text-black mb-2 drop-shadow-sm">
         Our Partners
       </h2>
       <div className="w-24 h-1 bg-orange-500 mx-auto mb-6 rounded"></div>
 
       {/* Intro Paragraph */}
-      <p className="text-center text-gray-700 max-w-2xl mx-auto mb-10">
+      <p className="text-center text-white max-w-2xl mx-auto mb-10">
         At PeelInnova, we collaborate with incredible organizations to expand our impact and bring sustainable innovations to life. Here are some of our valued partners:
       </p>
 
@@ -54,7 +54,7 @@ export default function Partners() {
         <h3 className="text-2xl font-semibold text-green-700">
           For Partnerships, contact:
         </h3>
-        <p className="mt-3 text-lg font-semibold text-black">
+        <p className="mt-3 text-lg font-semibold text-white">
           059 491 6406 / 024 710 4398 / 020 755 1942 / 050 343 7462
         </p>
       </div>

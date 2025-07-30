@@ -75,7 +75,7 @@ export default function Area() {
         {sdgs.map((goal, index) => (
           <div
             key={goal.number}
-            className="bg-green-50 rounded-xl p-6 text-center shadow hover:shadow-xl transition duration-300 relative group"
+            className="bg-green-600 rounded-xl p-6 text-center shadow-md hover:shadow-lg hover:scale-95 transition-transform duration-300 relative group text-white"
             data-aos="fade-up"
             data-aos-delay={index * 150}
           >
@@ -83,7 +83,7 @@ export default function Area() {
             <img
               src={goal.icon}
               alt={`SDG ${goal.number} - ${goal.title}`}
-              className="h-20 w-20 mx-auto mb-4 object-contain"
+              className="h-20 w-20 mx-auto mb-4 object-contain bg-white rounded-full p-2"
               onError={(e) => {
                 e.target.onerror = null;
                 e.target.src = "https://via.placeholder.com/100";
@@ -91,15 +91,15 @@ export default function Area() {
             />
 
             {/* TITLE */}
-            <h2 className="text-xl font-bold 0 mb-2">
+            <h2 className="text-xl font-bold mb-2">
               Goal {goal.number}: {goal.title}
             </h2>
 
             {/* DESCRIPTION */}
-            <p className="text-sm text-gray-700">{goal.description}</p>
+            <p className="text-sm">{goal.description}</p>
 
             {/* TOOLTIP on hover */}
-            <div className="absolute top-0 left-0 w-full h-full opacity-0 group-hover:opacity-100 transition-opacity bg-black bg-opacity-80 text-white p-4 rounded-xl text-sm flex items-center justify-center text-center pointer-events-none">
+            <div className="absolute top-0 left-0 w-full h-full opacity-0 group-hover:opacity-100 transition-opacity bg-opacity-80 text-white p-4 rounded-xl text-sm flex items-center justify-center text-center pointer-events-none">
               {goal.description}
             </div>
           </div>

@@ -49,11 +49,11 @@ export default function Footer() {
             Contact Us
           </button>
           <div className="flex space-x-4 mt-4 text-xl text-gray-400">
-            <FaFacebook className="hover:text-white cursor-pointer" />
-            <FaTwitter className="hover:text-white cursor-pointer" />
-            <FaInstagram className="hover:text-white cursor-pointer" />
-            <FaLinkedin className="hover:text-white cursor-pointer" />
-          </div>
+          <FaFacebook className="hover:text-white cursor-pointer" />
+          <FaTwitter className="hover:text-white cursor-pointer" />
+          <FaInstagram className="hover:text-white cursor-pointer" />
+          <FaLinkedin className="hover:text-white cursor-pointer" />
+       </div>
         </div>
       </div>
 

@@ -3,84 +3,74 @@ import angel1 from "../assets/images/angel1.png";
 import angel2 from "../assets/images/angel2.png";
 import angel3 from "../assets/images/angel3.png";
 import Navbar from "../components/Navbar";
-import spray1 from "../assets/images/spray1.png";
-import spray2 from "../assets/images/spray2.png";
-import spray3 from "../assets/images/spray3.png";
-// lol don’t judge the padding, I'm still tweaking the vibe :)
+import angel4 from "../assets/images/angel4.png";
+import angel5 from "../assets/images/angel5.png";
+import angel6 from "../assets/images/angel6.png";
+
 export default function Product() {
   const items = [
     {
       name: "Eco Mosquito Coil",
-      description:
-        "",
+      description: "",
       image: angel1,
     },
     {
       name: "Repellent Sachets",
-      description:
-        "",
+      description: "",
       image: angel2,
     },
     {
       name: "Natural Repellent Spray",
-      description:
-        "",
+      description: "",
       image: angel3,
     },
     {
       name: "Repellent Sachets",
-      description:
-        "",
-      image: spray1,
+      description: "",
+      image: angel4,
     },
     {
       name: "Repellent Sachets",
-      description:
-        "",
-      image: spray2,
+      description: "",
+      image: angel5,
     },
     {
       name: "Repellent Sachets",
-      description:
-        "",
-      image: spray3,
+      description: "",
+      image: angel6,
     },
   ];
 
   return (
     <>
-     <Navbar />
-    <section className="bg-[#fefefe] mt-[80px] py-20 px-6 text-gray-800">
-      <div className="text-center mb-14">
-        <h2 className="text-4xl font-bold">
-          What We Make 
-        </h2>
-        <p className="mt-4 max-w-2xl mx-auto text-gray-600 text-lg">
-         At peelinnova, we turn Waste into wonders - creating safe and sustainable mosquito-repel.
-        </p>
-      </div>
+      <Navbar />
+      <section className="bg-orange-100 mt-[80px] py-20 px-6">
+        <div className="text-center mb-14">
+          <h2 className="text-4xl font-bold text-orange-900">What We Make</h2>
+          <p className="mt-4 max-w-2xl mx-auto text-lg text-orange-800">
+            At PeelInnova, we turn waste into wonders – creating safe and sustainable mosquito-repellent products.
+          </p>
+        </div>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-12 max-w-6xl mx-auto">
-        {items.map((item, index) => (
-          <div
-            key={index}
-            className="flex flex-col items-center text-center"
-          >
-            <img
-              src={item.image}
-              alt={item.name}
-              className="h-48 w-48 object-contain rounded-xl mb-4"
-            />
-            <h3 className="text-lg font-semibold">
-              {item.name}
-            </h3>
-            <p className="text-[15px] text-gray-700 mt-1">{item.description}</p>
-
-            
-          </div>
-        ))}
-      </div>
-    </section>
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-12 max-w-6xl mx-auto">
+          {items.map((item, index) => (
+            <div
+              key={index}
+              className="flex flex-col items-center text-center bg-white rounded-xl shadow-lg p-6 transition-all duration-300 hover:scale-95 hover:shadow-2xl"
+            >
+              <img
+                src={item.image}
+                alt={item.name}
+                className="h-48 w-48 object-contain rounded-xl mb-4 transition-transform duration-300"
+              />
+              <h3 className="text-lg font-semibold text-orange-900 hover:text-orange-600 transition-colors">
+                {item.name}
+              </h3>
+              <p className="text-[15px] mt-1 text-gray-700">{item.description}</p>
+            </div>
+          ))}
+        </div>
+      </section>
     </>
   );
 }
