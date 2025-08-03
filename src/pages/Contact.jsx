@@ -6,8 +6,8 @@ export default function Contact() {
     <>
       <Navbar />
       {/* Map Header and Map */}
-      <section className="bg-[#fefefe] mt-[80px] py-20 px-6 text-gray-800">
-        <h2 className="text-3xl md:text-4xl font-bold mb-2">Find Us</h2>
+      <section className="bg-[#fefefe] mt-0 py-14 px-6 text-gray-800">
+        <h2 className="text-3xl md:text-4xl font-bold mb-2 text-center">Find Us</h2>
 
         <div className="w-full">
           <iframe
@@ -33,11 +33,17 @@ export default function Contact() {
               Reach out today. We’re here to help!
             </p>
             <div className="space-y-2 text-base text-gray-700">
-              <p>📧 peellnnova@gmail.com</p>
-              <p>📞 0247104398</p>
-              <p>📞 0207551942</p>
-              <p>📞 0503437462</p>
+              <p>📧 peellnnova25@gmail.com</p>
               <p>📍 3rd Floor Marble, Kumasi, Ghana</p>
+            </div>
+            {/* Partnerships Contact */}
+            <div className="mt-8">
+              <h3 className="text-2xl font-semibold text-black">
+                For Partnerships, contact:
+              </h3>
+              <p className="mt-3 text-lg font-semibold text-gray-800">
+                📞059 491 6406| 024 710 4398| 020 755 1942| 050 343 7462
+              </p>
             </div>
           </div>
 

@@ -83,7 +83,7 @@ export default function Area() {
             <img
               src={goal.icon}
               alt={`SDG ${goal.number} - ${goal.title}`}
-              className="h-20 w-20 mx-auto mb-4 object-contain bg-white rounded-full p-2"
+              className="h-30 w-30 mx-auto mb-4 object-contain bg-white p-2"
               onError={(e) => {
                 e.target.onerror = null;
                 e.target.src = "https://via.placeholder.com/100";
@@ -98,9 +98,8 @@ export default function Area() {
             {/* DESCRIPTION */}
             <p className="text-sm">{goal.description}</p>
 
-            {/* TOOLTIP on hover */}
+            {/* HOVER TOOLTIP (Description) */}
             <div className="absolute top-0 left-0 w-full h-full opacity-0 group-hover:opacity-100 transition-opacity bg-opacity-80 text-white p-4 rounded-xl text-sm flex items-center justify-center text-center pointer-events-none">
-              {goal.description}
             </div>
           </div>
         ))}

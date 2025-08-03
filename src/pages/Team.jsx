@@ -30,7 +30,7 @@ export default function Team() {
   return (
     <>
       <Navbar />
-    <section className="bg-[#fefefe] mt-[80px] py-20 px-6 text-gray-800">
+    <section className="bg-[#fefefe] mt-0 py-16 px-6 text-gray-800">
       <div className="text-center mb-14">
         <h2 className="text-4xl font-bold text-gray-800 tracking-tight">
           Meet <span className="">Our Team</span>
@@ -49,7 +49,7 @@ export default function Team() {
             <img
               src={member.image}
               alt={member.name}
-              className="w-full h-64 object-cover rounded-t-xl"
+              className="w-full h-85 object-cover rounded-t-xl"
             />
             <div className="p-5 text-center">
               <h3 className="text-lg font-medium text-gray-800">{member.name}</h3>
