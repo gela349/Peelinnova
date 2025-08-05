@@ -45,16 +45,6 @@ const products = [
     ],
   },
   {
-    name: "Eco Mosquito Coil",
-    image: angel1,
-    description: "Eco-friendly mosquito coil made from agricultural waste. Repels mosquitoes effectively while being safe for the environment.",
-    details: [
-      "Natural and eco-safe ingredients",
-      "Smokeless and pleasant aroma",
-      "Long-lasting burn time",
-    ],
-  },
-  {
     name: "Repellent Spray XL",
     image: angel4,
     description: "Larger sachets for bigger spaces like closets or storerooms.",
@@ -62,6 +52,16 @@ const products = [
       "Extra coverage",
       "Infused with citronella and neem",
       "Environmentally friendly packaging",
+    ],
+  },
+  {
+    name: "Eco Mosquito Coil",
+    image: angel1,
+    description: "Eco-friendly mosquito coil made from agricultural waste. Repels mosquitoes effectively while being safe for the environment.",
+    details: [
+      "Natural and eco-safe ingredients",
+      "Smokeless and pleasant aroma",
+      "Long-lasting burn time",
     ],
   },
   {
@@ -91,10 +91,10 @@ export default function Product() {
   const [selectedProduct, setSelectedProduct] = useState(null);
 
   useEffect(() => {
-    if (showCatalog) {
+    if (showCatalog || selectedProduct) {
       window.scrollTo(0, 0);
     }
-  }, [showCatalog]);
+  }, [showCatalog, selectedProduct]);
 
   return (
     <>
@@ -109,34 +109,46 @@ export default function Product() {
 
         {/* 🔍 Single Product View */}
         {selectedProduct ? (
-          <div className="max-w-4xl mx-auto bg-white p-6 rounded-xl shadow text-center">
-            <img
-              src={selectedProduct.image}
-              alt={selectedProduct.name}
-              className="h-72 w-full object-contain rounded-lg mb-6"
-            />
-            <h2 className="text-2xl font-bold text-black mb-2">
-              {selectedProduct.name}
-            </h2>
-            <p className="text-gray-700 mb-4">{selectedProduct.description}</p>
-            <ul className="list-disc list-inside text-left text-gray-600 mb-6">
-              {selectedProduct.details.map((item, idx) => (
-                <li key={idx}>{item}</li>
-              ))}
-            </ul>
-            <button
-              onClick={() => setSelectedProduct(null)}
-              className="bg-black text-white px-5 py-2 rounded hover:bg-gray-800"
-            >
-              ← Back to Carousel
-            </button>
+          <div className="max-w-6xl mx-auto bg-white p-6 md:p-10 rounded-xl shadow-md grid grid-cols-1 md:grid-cols-2 gap-10 items-start">
+            <div className="bg-gray-50 p-4 rounded-xl">
+              <img
+                src={selectedProduct.image}
+                alt={selectedProduct.name}
+                className="w-full h-[400px] object-contain rounded-xl"
+              />
+            </div>
+            <div>
+              <p className="text-sm uppercase font-semibold text-green-700 mb-2">
+                Product Info
+              </p>
+              <h2 className="text-3xl font-bold text-black mb-4">
+                {selectedProduct.name}
+              </h2>
+              <p className="text-gray-700 text-base mb-4">
+                {selectedProduct.description}
+              </p>
+              <ul className="list-disc pl-5 text-gray-800 space-y-2 mb-8">
+                {selectedProduct.details.map((point, idx) => (
+                  <li key={idx}>{point}</li>
+                ))}
+              </ul>
+              <button
+                onClick={() => setSelectedProduct(null)}
+                className="bg-black text-white px-6 py-2 rounded hover:bg-gray-800 transition"
+              >
+                 Back to Products
+              </button>
+            </div>
           </div>
         ) : showCatalog ? (
           <>
-            {/* 🧾 Product Catalog */}
             <div className="max-w-6xl mx-auto px-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 justify-items-center">
               {products.map((product, index) => (
-                <div key={index} className="bg-white rounded-xl shadow p-6">
+                <div
+                  key={index}
+                  className="bg-white rounded-xl shadow p-6 hover:shadow-xl transition"
+                  onClick={() => setSelectedProduct(product)}
+                >
                   <img
                     src={product.image}
                     alt={product.name}
@@ -159,7 +171,7 @@ export default function Product() {
                 onClick={() => setShowCatalog(false)}
                 className="bg-black text-white px-6 py-2 rounded hover:bg-gray-800 transition"
               >
-                ← Back to Carousel
+                 Back to Products
               </button>
             </div>
           </>
@@ -175,7 +187,7 @@ export default function Product() {
                 breakpoints={{
                   640: { slidesPerView: 1 },
                   768: { slidesPerView: 2 },
-                  1024: { slidesPerView: 3 },
+                  1024: { slidesPerView: 4 }, // ✅ 4 products on large screens
                 }}
                 onSlideChange={(swiper) => {
                   if (swiper.isEnd) {

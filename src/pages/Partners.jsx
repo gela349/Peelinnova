@@ -28,10 +28,12 @@ export default function Partners() {
     { name: "", logo: partner8 },
   ];
 
+  const scrollingPartners = [...partners, ...partners];
+
   return (
     <>
       <Navbar />
-      <section className="bg-white pt-[40px] py-10 px-6 text-gray-800">
+      <section className="bg-white pt-20 px-6 text-gray-800 overflow-hidden">
         <h2
           data-aos="fade-down"
           className="text-4xl font-bold text-center text-black mb-2 drop-shadow-sm"
@@ -40,34 +42,63 @@ export default function Partners() {
         </h2>
         <div
           data-aos="fade-down"
-          className="w-24 h-1 bg-green-500 mx-auto mb-6 rounded"
+          className="w-24 h-1 bg-gradient-to-r from-green-500 via-lime-500 to-green-600 mx-auto mb-6 rounded"
         ></div>
 
         <p
           data-aos="fade-up"
           className="text-center text-gray-700 max-w-2xl mx-auto mb-10"
         >
-          We proudly collaborate with forward-thinking partners to drive impact.
+          
         </p>
 
-        {/* Horizontal scroll slider */}
-        <div className="overflow-x-auto no-scrollbar">
-          <div className="flex gap-6 px-4 scroll-smooth snap-x snap-mandatory">
-            {partners.map((partner, index) => (
+        {/* Auto-scrolling marquee with animated zoom cards */}
+        <div className="relative overflow-hidden w-full">
+          <div className="flex gap-8 w-max animate-marquee">
+            {scrollingPartners.map((partner, index) => (
               <div
                 key={index}
-                className="snap-center flex-shrink-0 bg-white border border-gray-200 rounded-xl shadow-lg p-4 w-[200px] h-[150px] flex items-center justify-center transform hover:scale-105 transition duration-300"
-                data-aos="fade-up"
+                className="partner-card w-[200px] h-[150px] flex-shrink-0 bg-white border border-gray-200 rounded-xl shadow-md flex flex-col items-center justify-center transition-all duration-300"
               >
                 <img
                   src={partner.logo}
-                  alt={`Partner ${index + 1}`}
-                  className="h-[80px] object-contain"
+                  alt={partner.name}
+                  className="h-[80px] object-contain mb-2"
                 />
+                <p className="text-sm text-gray-600">{partner.name}</p>
               </div>
             ))}
           </div>
         </div>
+
+        {/* Animation styles */}
+        <style jsx>{`
+          @keyframes marquee {
+            0% {
+              transform: translateX(0%);
+            }
+            100% {
+              transform: translateX(-50%);
+            }
+          }
+
+          @keyframes zoomInOut {
+            0%, 100% {
+              transform: scale(1);
+            }
+            50% {
+              transform: scale(1.1);
+            }
+          }
+
+          .animate-marquee {
+            animation: marquee 30s linear infinite;
+          }
+
+          .partner-card {
+            animation: zoomInOut 4s ease-in-out infinite;
+          }
+        `}</style>
       </section>
     </>
   );

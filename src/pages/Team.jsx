@@ -20,7 +20,7 @@ export default function Team() {
       socials: [FaFacebook, FaInstagram, FaLinkedin],
     },
     {
-      name: "Enock Siekaah",
+      name: "Enoch Siekaah",
       role: "User Experience Officer",
       image: user,
       socials: [FaInstagram, FaTwitter],
