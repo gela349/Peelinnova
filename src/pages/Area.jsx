@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import AOS from "aos";
-import "aos/dist/aos.css"; // Import AOS styles
+import "aos/dist/aos.css";
 import sdgs1 from "../assets/images/sdgs1.png";
 import sdgs3 from "../assets/images/sdgs3.png";
 import sdgs8 from "../assets/images/sdgs8.png";
@@ -59,14 +59,22 @@ export default function Area() {
   }, []);
 
   return (
-    <section className="px-6 py-16 bg-white text-gray-800">
+    <section className="px-6 py-16 bg-white text-gray-800 font-[Montserrat]">
       {/* Header */}
       <div className="text-center mb-12">
-        <h1 className="text-4xl md:text-5xl font-bold mb-4 capitalize">
-          Our Contribution to the SDGs
+        <h1
+          className="text-4xl md:text-5xl font-bold mb-4 capitalize"
+          style={{ fontFamily: "Poppins, sans-serif" }}
+        >
+          Our Contribution to the{" "}
+          <span style={{ fontFamily: "Courgette, cursive" }}>SDGs</span>
         </h1>
-        <p className="max-w-2xl mx-auto text-lg text-gray-600">
-          PeelInnova supports global sustainability through innovation, inclusion, and eco-conscious production aligned with the UN Sustainable Development Goals.
+        <p
+          className="max-w-2xl mx-auto text-lg text-gray-600 italic"
+          style={{ fontFamily: "Poppins, sans-serif" }}
+        >
+          PeelInnova supports global sustainability through innovation,
+          inclusion, and eco-conscious production aligned with the UN Sustainable Development Goals.
         </p>
       </div>
 
@@ -79,7 +87,6 @@ export default function Area() {
             data-aos="fade-up"
             data-aos-delay={index * 150}
           >
-            {/* IMAGE */}
             <img
               src={goal.icon}
               alt={`SDG ${goal.number} - ${goal.title}`}
@@ -90,17 +97,14 @@ export default function Area() {
               }}
             />
 
-            {/* TITLE */}
-            <h2 className="text-xl font-bold mb-2">
+            <h2
+              className="text-xl font-bold mb-2"
+              style={{ fontFamily: "Courgette, cursive" }}
+            >
               Goal {goal.number}: {goal.title}
             </h2>
 
-            {/* DESCRIPTION */}
             <p className="text-sm">{goal.description}</p>
-
-            {/* HOVER TOOLTIP (Description) */}
-            <div className="absolute top-0 left-0 w-full h-full opacity-0 group-hover:opacity-100 transition-opacity bg-opacity-80 text-white p-4 rounded-xl text-sm flex items-center justify-center text-center pointer-events-none">
-            </div>
           </div>
         ))}
       </div>

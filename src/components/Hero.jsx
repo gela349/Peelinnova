@@ -1,8 +1,8 @@
 import React from "react";
- import peel   from "../assets/images/peel.mp4"; // Adjust the path as necessary
- import { Swiper, SwiperSlide } from "swiper/react";
- import { Autoplay } from "swiper/modules";
- import "swiper/css";
+import peel from "../assets/images/peel.mp4"; // Adjust the path as necessary
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay } from "swiper/modules";
+import "swiper/css";
 
 export default function Hero() {
   return (
@@ -27,7 +27,7 @@ export default function Hero() {
         <SwiperSlide className="w-screen h-screen relative">
           <div className="bg-black/40 absolute inset-0 z-10"></div>
           <div className="absolute inset-0 z-20 flex items-center justify-center px-4">
-            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-5xl text-white font-bold italic text-center">
+            <h1 className="font-[Poppins] text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-5xl text-white font-bold italic text-center">
               In the lush of pineapple farms, farmers work tirelessly to bring
               fresh produce to our tables.
             </h1>
@@ -38,7 +38,7 @@ export default function Hero() {
         <SwiperSlide className="w-screen h-screen relative">
           <div className="bg-black/40 absolute inset-0 z-10"></div>
           <div className="absolute inset-0 z-20 flex items-center justify-center px-4">
-            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-5xl text-white font-bold italic text-center">
+            <h1 className="font-[Poppins] text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-5xl text-white font-bold italic text-center">
               Did you know that millions of tons of fruits like pineapples and
               oranges are wasted globally every year?
             </h1>
@@ -49,7 +49,7 @@ export default function Hero() {
         <SwiperSlide className="w-screen h-screen relative">
           <div className="bg-black/40 absolute inset-0 z-10"></div>
           <div className="absolute inset-0 z-20 flex items-center justify-center px-4">
-            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-5xl text-white font-bold italic text-center">
+            <h1 className="font-[Poppins] text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-5xl text-white font-bold italic text-center">
               This not only harms our environment but also wastes valuable
               resources.
             </h1>
@@ -60,7 +60,7 @@ export default function Hero() {
         <SwiperSlide className="w-screen h-screen relative">
           <div className="bg-black/40 absolute inset-0 z-10"></div>
           <div className="absolute inset-0 z-20 flex items-center justify-center px-4">
-            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-5xl text-white font-bold italic text-center">
+            <h1 className="font-[Poppins] text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-5xl text-white font-bold italic text-center">
               Mosquitoes continue to spread diseases like malaria and dengue
               fever.
             </h1>
@@ -71,18 +71,18 @@ export default function Hero() {
         <SwiperSlide className="w-screen h-screen relative">
           <div className="bg-black/40 absolute inset-0 z-10"></div>
           <div className="absolute inset-0 z-20 flex items-center justify-center px-4">
-            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-5xl text-white font-bold italic text-center">
+            <h1 className="font-[Poppins] text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-5xl text-white font-bold italic text-center">
               To some there are no accessible solutions and to many, the cost for
               the solutions are extremely expensive.
             </h1>
           </div>
         </SwiperSlide>
 
-        {/* Slide 6 */}
+        {/* Slide 6 - Courgette main title */}
         <SwiperSlide className="w-screen h-screen relative">
           <div className="bg-black/40 absolute inset-0 z-10"></div>
           <div className="absolute inset-0 z-20 flex items-center justify-center px-4">
-            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-5xl text-white font-bold italic text-center">
+            <h1 className="font-[Courgette] text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-5xl text-white font-bold italic text-center">
               An innovative solution that tackles both fruit waste and malaria.
               This is it.
             </h1>

@@ -13,76 +13,54 @@ import angel5 from "../assets/images/angel5.png";
 import angel6 from "../assets/images/angel6.png";
 import angel7 from "../assets/images/angel7.png";
 
+// ✅ Import Google Fonts directly
+import "@fontsource/montserrat"; // Defaults to weight 400
+import "@fontsource/courgette"; // Single weight
+import "@fontsource/poppins/400.css";
+import "@fontsource/poppins/700.css";
+
 const products = [
   {
     name: "Night Guard Spray",
     image: angel6,
     description: "Sleep peacefully with night-time sachets designed for bedroom use.",
-    details: [
-      "Slow release overnight",
-      "Lavender-infused",
-      "Child-safe and tested",
-    ],
+    details: ["Slow release overnight", "Lavender-infused", "Child-safe and tested"],
   },
   {
     name: "Repellent Coil",
     image: angel2,
     description: "Scented sachets that repel mosquitoes naturally. Ideal for drawers, bags, or small rooms.",
-    details: [
-      "Plant-based essential oils",
-      "No synthetic chemicals",
-      "Lasts up to 30 days",
-    ],
+    details: ["Plant-based essential oils", "No synthetic chemicals", "Lasts up to 30 days"],
   },
   {
     name: "Natural Repellent Coil",
     image: angel3,
     description: "Spray-on repellent with natural oils for long-lasting mosquito protection.",
-    details: [
-      "Repels mosquitoes, gnats & ticks",
-      "Non-greasy formula",
-      "Safe for kids over 3 years",
-    ],
+    details: ["Repels mosquitoes, gnats & ticks", "Non-greasy formula", "Safe for kids over 3 years"],
   },
   {
     name: "Repellent Spray XL",
     image: angel4,
     description: "Larger sachets for bigger spaces like closets or storerooms.",
-    details: [
-      "Extra coverage",
-      "Infused with citronella and neem",
-      "Environmentally friendly packaging",
-    ],
+    details: ["Extra coverage", "Infused with citronella and neem", "Environmentally friendly packaging"],
   },
   {
     name: "Eco Mosquito Coil",
     image: angel1,
     description: "Eco-friendly mosquito coil made from agricultural waste. Repels mosquitoes effectively while being safe for the environment.",
-    details: [
-      "Natural and eco-safe ingredients",
-      "Smokeless and pleasant aroma",
-      "Long-lasting burn time",
-    ],
+    details: ["Natural and eco-safe ingredients", "Smokeless and pleasant aroma", "Long-lasting burn time"],
   },
   {
     name: "Pocket Spray",
     image: angel5,
     description: "Handy pocket-size spray for outdoor use.",
-    details: [
-      "Fits in pockets and purses",
-      "Instant protection on the go",
-      "Fresh herbal scent",
-    ],
+    details: ["Fits in pockets and purses", "Instant protection on the go", "Fresh herbal scent"],
   },
   {
     name: "Night Angel Mosquito Coil",
     image: angel7,
     description: "Fruity-scented mosquito coil for long-lasting protection.",
-    details: [
-      "Contains 10 coils per box",
-      "Effective for 12 hours",
-      "Low smoke, long-lasting",
-    ],
+    details: ["Contains 10 coils per box", "Effective for 12 hours", "Low smoke, long-lasting"],
   },
 ];
 
@@ -99,15 +77,16 @@ export default function Product() {
   return (
     <>
       <Navbar />
-      <section className="bg-white mt-16 py-10 px-4">
+      <section className="bg-white mt-16 py-10 px-4" style={{ fontFamily: "Montserrat, sans-serif" }}>
         <div className="text-center mb-14">
-          <h2 className="text-4xl font-bold text-black">What We Make</h2>
+          <h2 className="text-4xl font-bold text-black" style={{ fontFamily: "Courgette, cursive" }}>
+            What We Make
+          </h2>
           <p className="mt-4 max-w-2xl mx-auto text-lg text-black">
             At PeelInnova, we turn waste into wonders – creating safe and sustainable mosquito-repellent products.
           </p>
         </div>
 
-        {/* 🔍 Single Product View */}
         {selectedProduct ? (
           <div className="max-w-6xl mx-auto bg-white p-6 md:p-10 rounded-xl shadow-md grid grid-cols-1 md:grid-cols-2 gap-10 items-start">
             <div className="bg-gray-50 p-4 rounded-xl">
@@ -118,15 +97,13 @@ export default function Product() {
               />
             </div>
             <div>
-              <p className="text-sm uppercase font-semibold text-green-700 mb-2">
+              <p className="text-sm uppercase font-semibold text-green-700 mb-2" style={{ fontFamily: "Poppins, sans-serif" }}>
                 Product Info
               </p>
-              <h2 className="text-3xl font-bold text-black mb-4">
+              <h2 className="text-3xl font-bold text-black mb-4" style={{ fontFamily: "Poppins, sans-serif" }}>
                 {selectedProduct.name}
               </h2>
-              <p className="text-gray-700 text-base mb-4">
-                {selectedProduct.description}
-              </p>
+              <p className="text-gray-700 text-base mb-4">{selectedProduct.description}</p>
               <ul className="list-disc pl-5 text-gray-800 space-y-2 mb-8">
                 {selectedProduct.details.map((point, idx) => (
                   <li key={idx}>{point}</li>
@@ -136,7 +113,7 @@ export default function Product() {
                 onClick={() => setSelectedProduct(null)}
                 className="bg-black text-white px-6 py-2 rounded hover:bg-gray-800 transition"
               >
-                 Back to Products
+                Back to Products
               </button>
             </div>
           </div>
@@ -154,7 +131,7 @@ export default function Product() {
                     alt={product.name}
                     className="h-60 w-full object-contain mb-6 rounded-lg"
                   />
-                  <h3 className="text-xl font-bold text-black">
+                  <h3 className="text-xl font-bold text-black" style={{ fontFamily: "Poppins, sans-serif" }}>
                     {product.name}
                   </h3>
                   <p className="mt-2 text-gray-700">{product.description}</p>
@@ -171,23 +148,32 @@ export default function Product() {
                 onClick={() => setShowCatalog(false)}
                 className="bg-black text-white px-6 py-2 rounded hover:bg-gray-800 transition"
               >
-                 Back to Products
+                Back to Products
               </button>
             </div>
           </>
         ) : (
           <>
-            {/* 🎠 Carousel */}
-            <div className="max-w-7xl mx-auto">
+            <div className="relative max-w-7xl mx-auto">
+              <div className="absolute top-1/2 left-0 transform -translate-y-1/2 z-10">
+                <button className="swiper-button-prev w-6 h-6 bg-black rounded-full"></button>
+              </div>
+              <div className="absolute top-1/2 right-0 transform -translate-y-1/2 z-10">
+                <button className="swiper-button-next w-6 h-6 bg-black rounded-full"></button>
+              </div>
+
               <Swiper
                 modules={[Navigation]}
                 spaceBetween={30}
                 slidesPerView={1}
-                navigation
+                navigation={{
+                  nextEl: ".swiper-button-next",
+                  prevEl: ".swiper-button-prev",
+                }}
                 breakpoints={{
                   640: { slidesPerView: 1 },
                   768: { slidesPerView: 2 },
-                  1024: { slidesPerView: 4 }, // ✅ 4 products on large screens
+                  1024: { slidesPerView: 4 },
                 }}
                 onSlideChange={(swiper) => {
                   if (swiper.isEnd) {
@@ -203,7 +189,7 @@ export default function Product() {
                         alt={item.name}
                         className="h-48 w-full object-contain mx-auto rounded-xl mb-4"
                       />
-                      <h3 className="text-lg font-semibold text-black mb-2">
+                      <h3 className="text-lg font-semibold text-black mb-2" style={{ fontFamily: "Poppins, sans-serif" }}>
                         {item.name}
                       </h3>
                       <button
@@ -220,6 +206,23 @@ export default function Product() {
           </>
         )}
       </section>
+
+      {/* 🔻 ADD THIS TO REMOVE DEFAULT SWIPER ARROWS */}
+      <style>{`
+        .swiper-button-next::after,
+        .swiper-button-prev::after {
+        content: "";
+        display: none !important;
+        }
+        .swiper-button-next,
+        .swiper-button-prev {
+         width: 40px;
+         height: 40px;
+         background-color: black;
+         border-radius: 9999px;
+         z-index: 10;
+        }
+      `}</style>
     </>
   );
 }
