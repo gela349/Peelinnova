@@ -14,14 +14,12 @@ export default function Contact() {
         <div className="w-full">
           <iframe
             title="PeelInnova Kumasi Location"
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3972.256889044623!2d-1.6244318859304306!3d6.688427295176241!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xfdc10b1fc9d5d4d%3A0x9f1a59be1e755e15!2sMarble%20House%2C%20Kumasi%2C%20Ghana!5e0!3m2!1sen!2sgh!4v1721382830123!5m2!1sen!2sgh"
-            width="100%"
-            height="400"
-            style={{ border: 0 }}
-            allowFullScreen="w-full"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d126804.83017610651!2d-1.6161060500000002!3d6.6900854999999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xfdb93e59a4e4c49%3A0x829c711d7b65e682!2sKumasi!5e0!3m2!1sen!2sgh!4v1754836021304!5m2!1sen!2sgh"
+            className="w-full h-[400px] border-0"
+            allowFullScreen
             loading="lazy"
             referrerPolicy="no-referrer-when-downgrade"
-          ></iframe>
+          />
         </div>
       </section>
 
